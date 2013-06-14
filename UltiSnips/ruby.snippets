@@ -1,0 +1,27 @@
+snippet des "describe <class, method, etc.> do ... end"
+describe $1 do
+  $0
+end
+endsnippet
+
+snippet i "it<behavior> { ... }"
+it$1 { $0 }
+endsnippet
+
+snippet it "it(<behavior>) do ... end"
+it("$1") do
+  $0
+end
+endsnippet
+
+snippet let "let(:<variable>) { ... }"
+let(:$1) { $0 }
+endsnippet
+
+snippet sub "subject { ... }"
+subject { $0 }
+endsnippet
+
+snippet bef "before(:each) { ... }"
+before(:each) { $0 }
+endsnippet
