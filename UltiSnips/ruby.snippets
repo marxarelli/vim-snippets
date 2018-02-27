@@ -1,17 +1,32 @@
+snippet pry "require 'pry-byebug'; binding.pry"
+require 'pry-byebug'
+binding.pry
+endsnippet
+
 snippet des "describe <class, method, etc.> do ... end"
 describe $1 do
   $0
 end
 endsnippet
 
-snippet i "it<behavior> { ... }"
-it$1 { $0 }
-endsnippet
-
-snippet it "it(<behavior>) do ... end"
-it("$1") do
+snippet con "context <description> do ... end"
+context '$1' do
   $0
 end
+endsnippet
+
+snippet i "it<behavior> { ... }"
+it { is_expected.$0 }
+endsnippet
+
+snippet it "it <behavior> do ... end"
+it '$1' do
+  $0
+end
+endsnippet
+
+snippet its "its(:<attribute>) { ... }"
+its(:$1) { $0 }
 endsnippet
 
 snippet let "let(:<variable>) { ... }"
@@ -22,6 +37,43 @@ snippet sub "subject { ... }"
 subject { $0 }
 endsnippet
 
-snippet bef "before(:each) { ... }"
-before(:each) { $0 }
+snippet bef "before { ... }"
+before { $0 }
+endsnippet
+
+snippet before "before do ... end"
+before do
+  $0
+end
+endsnippet
+
+snippet def "def <method><parameters> ... end"
+def ${1:method}$2
+  $0
+end
+endsnippet
+
+snippet ## "# ----"
+# ----------------------------------------------------------------------
+# $1
+# ======================================================================
+$0
+endsnippet
+
+snippet G "Given(/^$/) do ... end"
+Given(/^$1$/) do
+  $0
+end
+endsnippet
+
+snippet W "When(/^$/) do ... end"
+When(/^$1$/) do
+  $0
+end
+endsnippet
+
+snippet T "Then(/^$/) do ... end"
+Then(/^$1$/) do
+  $0
+end
 endsnippet
