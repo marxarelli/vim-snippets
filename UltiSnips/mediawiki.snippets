@@ -1,0 +1,43 @@
+snippet = "= Section ="
+= $1 =
+$0
+endsnippet
+
+snippet == "== Section =="
+== $1 ==
+$0
+endsnippet
+
+snippet === "=== Section ==="
+=== $1 ===
+$0
+endsnippet
+
+snippet ==== "==== Section ===="
+==== $1 ====
+$0
+endsnippet
+
+snippet ref "<ref>"
+<ref${1: name="$2"}>$3</ref>
+endsnippet
+
+snippet refn "<ref name=<previous reference>/>"
+<ref name="$1"/>
+endsnippet
+
+snippet syn "<syntaxhighlight lang='<language'>..."
+<syntaxhighlight lang="$1">
+$0
+</syntaxhighlight>
+endsnippet
+
+snippet ruby "<syntaxhighlight lang='ruby'>..."
+<syntaxhighlight lang="ruby">
+$0
+</syntaxhighlight>
+endsnippet
+
+snippet code "<code>...</code>"
+<code>$1</code>
+endsnippet
