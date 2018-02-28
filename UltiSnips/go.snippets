@@ -1,0 +1,15 @@
+snippet as "assert.<func>(t, ...)"
+assert.$1(t, $0)
+endsnippet
+
+snippet ifas "if assert.<func>(t, ...) { ... }"
+if assert.${1:NoError}(t, ${2:err}) {
+	$0
+}
+endsnippet
+
+snippet ifne "if assert.NoError(t, err) { ... }"
+if assert.NoError(t, err) {
+	$0
+}
+endsnippet
