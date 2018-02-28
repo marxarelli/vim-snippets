@@ -1,3 +1,9 @@
+snippet run "t.Run(<msg>, func(t *testing.T) { ... })"
+t.Run("$1", func(t *testing.T) {
+	$0
+})
+endsnippet
+
 snippet as "assert.<func>(t, ...)"
 assert.$1(t, $0)
 endsnippet
