@@ -5,7 +5,7 @@ t.Run("$1", func(t *testing.T) {
 endsnippet
 
 snippet as "assert.<func>(t, ...)"
-assert.$1(t, $0)
+assert.${1:Equal}(t, $0)
 endsnippet
 
 snippet ifas "if assert.<func>(t, ...) { ... }"
@@ -18,4 +18,16 @@ snippet ifne "if assert.NoError(t, err) { ... }"
 if assert.NoError(t, err) {
 	$0
 }
+endsnippet
+
+snippet debug "fmt.Printf('--- debug: %#v', ...)"
+fmt.Printf("--- ${1:debug}: %#v\n", ${0:$1})
+endsnippet
+
+snippet tdebug "t.Logf('--- debug: %#v', ...)"
+t.Logf("--- ${1:debug}: %#v\n", ${0:$1})
+endsnippet
+
+snippet pl "fmt.Println(...)"
+fmt.Println("$0")
 endsnippet
