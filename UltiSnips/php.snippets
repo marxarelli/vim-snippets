@@ -1,0 +1,36 @@
+snippet	test "public function test<name> { <body> }"
+public function test$1() {
+	$0
+}
+endsnippet
+
+snippet phpunit "<?php use PHPUnit\Framework\TestCase; ..."
+<?php
+
+namespace MediaWiki\Tests\Unit\\$1;
+
+use MediaWiki\\$1\\$2;
+use PHPUnit\Framework\TestCase;
+
+/**
+ * @covers \MediaWiki\\$1\\$2
+ */
+class $2Test extends TestCase {
+	$0
+}
+endsnippet
+
+snippet am "$this->assertSame($1, $0);"
+$this->assertSame(
+	$1,
+	$0
+);
+endsnippet
+
+snippet as "$this->assert$1($0);"
+$this->assert$1( $0 );
+endsnippet
+
+snippet ex "$this->expectException($0::class);"
+$this->expectException( $0::class );
+endsnippet
