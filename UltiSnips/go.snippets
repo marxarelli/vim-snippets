@@ -31,3 +31,7 @@ endsnippet
 snippet pl "fmt.Println(...)"
 fmt.Println("$0")
 endsnippet
+
+snippet re "return nil, errors.Wrap(err, ...)"
+return ${1:nil, }errors.${2:Wrap}(err, "$0")
+endsnippet
