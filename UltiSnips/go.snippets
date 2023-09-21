@@ -1,3 +1,11 @@
+snippet test "func Test<fn>(t *testing.T) { ... }"
+func Test$1(t *testing.T) {
+	req := require.New(t)
+
+	$0
+}
+endsnippet
+
 snippet run "t.Run(<msg>, func(t *testing.T) { ... })"
 t.Run("$1", func(t *testing.T) {
 	$0
